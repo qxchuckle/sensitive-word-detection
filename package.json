@@ -32,11 +32,11 @@
       },
       {
         "command": "sensitive-word-detection.uploadSensitiveWordsFile",
-        "title": "UploadSensitiveWordsFile"
+        "title": "自定义敏感词"
       },
       {
         "command": "sensitive-word-detection.resetSensitiveWordsFile",
-        "title": "ResetSensitiveWordsFile"
+        "title": "重置敏感词"
       }
     ],
     "menus": {

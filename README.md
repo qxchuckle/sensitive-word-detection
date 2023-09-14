@@ -7,8 +7,8 @@
 **快捷键:** `alt+shift+m` 检测，`alt+shift+n` 停止检测。
 
 **命令:**敏感词支持**热重载**
-1. `UploadSensitiveWordsFile` 上传自定义敏感词txt文件，格式：一行一个敏感词。
-2. `ResetSensitiveWordsFile` 重置为插件自带的敏感词。
+1. `自定义敏感词` 上传自定义敏感词txt文件，格式：一行一个敏感词。
+2. `重置敏感词` 重置为插件自带的敏感词。
 
 ![image](https://github.com/qxchuckle/vsc-cec-ide/assets/55614189/9ef1cf17-5c01-4cc5-86ce-dd879e0dc60e)
 
