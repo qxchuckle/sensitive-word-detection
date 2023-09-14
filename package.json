@@ -1,0 +1,108 @@
+{
+  "name": "sensitive-word-detection",
+  "displayName": "sensitive-word-detection",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onUriOpen"
+  ],
+  "main": "./out/extension.js",
+  "icon": "resource/images/CEC-IDE.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cec-ide.mark-sensitive-words",
+        "title": "检测敏感词"
+      },
+      {
+        "command": "cec-ide.stop-mark-sensitive-words",
+        "title": "停止检测敏感词"
+      },
+      {
+        "command": "cec-ide.uploadSensitiveWordsFile",
+        "title": "CEC-UploadSensitiveWordsFile"
+      },
+      {
+        "command": "cec-ide.resetSensitiveWordsFile",
+        "title": "CEC-ResetSensitiveWordsFile"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorTextFocus",
+          "command": "cec-ide.mark-sensitive-words",
+          "group": "navigation@1"
+        },
+        {
+          "when": "editorTextFocus",
+          "command": "cec-ide.stop-mark-sensitive-words",
+          "group": "navigation@1"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "cec-ide.mark-sensitive-words",
+        "key": "alt+shift+m",
+        "mac": "alt+shift+m",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "cec-ide.stop-mark-sensitive-words",
+        "key": "alt+shift+n",
+        "mac": "alt+shift+n",
+        "when": "editorTextFocus"
+      }
+    ],
+    "icons": {
+      "cec-ide-line": {
+        "description": "cec-ide-line",
+        "default": {
+          "fontPath": "./resource/images/CEC-IDE-LINE.woff",
+          "fontCharacter": "\\E900"
+        }
+      }
+    },
+    "filters": {
+      "description": "cec-ide-line",
+      "textFiles": [
+        "txt"
+      ]
+    }
+  },
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.70.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "@vscode/test-electron": "^2.3.4",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "mint-filter": "^4.0.3"
+  }
+}
