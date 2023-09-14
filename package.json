@@ -1,7 +1,12 @@
 {
   "name": "sensitive-word-detection",
-  "displayName": "sensitive-word-detection",
-  "description": "",
+  "displayName": "敏感词检测",
+  "description": "VSC敏感词检测插件",
+  "publisher": "qcqx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qxchuckle/vsc-cec-ide.git"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.70.0"
