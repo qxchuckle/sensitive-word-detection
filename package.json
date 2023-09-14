@@ -5,7 +5,7 @@
   "publisher": "qcqx",
   "repository": {
     "type": "git",
-    "url": "https://github.com/qxchuckle/vsc-cec-ide.git"
+    "url": "https://github.com/qxchuckle/sensitive-word-detection.git"
   },
   "version": "0.0.1",
   "engines": {
