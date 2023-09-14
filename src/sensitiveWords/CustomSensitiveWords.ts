@@ -10,7 +10,7 @@ export function customSensitiveWords(context: vscode.ExtensionContext) {
   const customSensitiveWordsPath = path.join(context.extensionPath, 'resource', 'text', 'CustomSensitiveWords.txt');
   const password = 'chuckle';
 
-  const uploadSensitiveWordsFile = vscode.commands.registerCommand('cec-ide.uploadSensitiveWordsFile', async () => {
+  const uploadSensitiveWordsFile = vscode.commands.registerCommand('sensitive-word-detection.uploadSensitiveWordsFile', async () => {
     const options: vscode.OpenDialogOptions = {
       canSelectMany: false,
       openLabel: 'Upload',
@@ -35,7 +35,7 @@ export function customSensitiveWords(context: vscode.ExtensionContext) {
     }
   });
 
-  const resetSensitiveWordsFile = vscode.commands.registerCommand('cec-ide.resetSensitiveWordsFile', async () => {
+  const resetSensitiveWordsFile = vscode.commands.registerCommand('sensitive-word-detection.resetSensitiveWordsFile', async () => {
     fs.writeFile(customSensitiveWordsPath, "", 'utf8', (err) => {
       if (err) {
         vscode.window.showInformationMessage("重置敏感词失败。");

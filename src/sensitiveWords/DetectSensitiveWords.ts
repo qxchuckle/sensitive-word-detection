@@ -19,10 +19,10 @@ export const mint = { value: null } as unknown as ref<Mint>;
 const isDetectingSensitiveWords = { value: false } as unknown as ref<boolean>;
 
 export function detectSensitiveWords(context: vscode.ExtensionContext) {
-  const markCommand = vscode.commands.registerCommand('cec-ide.mark-sensitive-words', () => {
+  const markCommand = vscode.commands.registerCommand('sensitive-word-detection.mark-sensitive-words', () => {
     markSensitiveWords(mint);
   });
-  const stopCommand = vscode.commands.registerCommand('cec-ide.stop-mark-sensitive-words', () => {
+  const stopCommand = vscode.commands.registerCommand('sensitive-word-detection.stop-mark-sensitive-words', () => {
     stopMarkSensitiveWords();
   });
   context.subscriptions.push(markCommand, stopCommand);

@@ -19,49 +19,49 @@
     "onUriOpen"
   ],
   "main": "./out/extension.js",
-  "icon": "resource/images/CEC-IDE.png",
+  "icon": "resource/images/logo.png",
   "contributes": {
     "commands": [
       {
-        "command": "cec-ide.mark-sensitive-words",
+        "command": "sensitive-word-detection.mark-sensitive-words",
         "title": "检测敏感词"
       },
       {
-        "command": "cec-ide.stop-mark-sensitive-words",
+        "command": "sensitive-word-detection.stop-mark-sensitive-words",
         "title": "停止检测敏感词"
       },
       {
-        "command": "cec-ide.uploadSensitiveWordsFile",
-        "title": "CEC-UploadSensitiveWordsFile"
+        "command": "sensitive-word-detection.uploadSensitiveWordsFile",
+        "title": "UploadSensitiveWordsFile"
       },
       {
-        "command": "cec-ide.resetSensitiveWordsFile",
-        "title": "CEC-ResetSensitiveWordsFile"
+        "command": "sensitive-word-detection.resetSensitiveWordsFile",
+        "title": "ResetSensitiveWordsFile"
       }
     ],
     "menus": {
       "editor/context": [
         {
           "when": "editorTextFocus",
-          "command": "cec-ide.mark-sensitive-words",
+          "command": "sensitive-word-detection.mark-sensitive-words",
           "group": "navigation@1"
         },
         {
           "when": "editorTextFocus",
-          "command": "cec-ide.stop-mark-sensitive-words",
+          "command": "sensitive-word-detection.stop-mark-sensitive-words",
           "group": "navigation@1"
         }
       ]
     },
     "keybindings": [
       {
-        "command": "cec-ide.mark-sensitive-words",
+        "command": "sensitive-word-detection.mark-sensitive-words",
         "key": "alt+shift+m",
         "mac": "alt+shift+m",
         "when": "editorTextFocus"
       },
       {
-        "command": "cec-ide.stop-mark-sensitive-words",
+        "command": "sensitive-word-detection.stop-mark-sensitive-words",
         "key": "alt+shift+n",
         "mac": "alt+shift+n",
         "when": "editorTextFocus"
